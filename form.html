@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: darkgrey;
+            background-image: url(hotel.jpg);
+        }
+
+        #div {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            width: 950px;
+            align-self: center;
+            height: 1000px;
+        }
+
+        #majtas {
+            width: 500px;
+        }
+
+
+
+        #mes {
+            box-sizing: border-box;
+            transform: translate(-50%, 0);
+            border: 4px solid chocolate;
+            position: absolute;
+            left: 50%;
+            padding: 20px;
+            bottom: 0%;
+            background-color: rgb(219, 133, 62);
+        }
+
+        #emri,
+        #mbiemri,
+        #tel,
+        #personat,
+        #data,
+        #data2,
+        #email,
+        #submit {
+            display: block;
+            padding: 5px;
+            border-radius: 8px;
+
+        }
+
+        #personat {
+            width: 157px;
+            margin-bottom: -8px;
+        }
+
+        #data {
+            width: 157px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        #data2 {
+            width: 157px;
+            margin-top: 5px;
+        }
+
+        #submit {
+            width: 100px;
+
+        }
+
+        #fieldset {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <form method="GET" validate  enctype="multipart/form-data" autocomplete="off"
+        id="rezervoni" action="form2.html">
+        <div id="mes">
+            <h2 id="h2">Book your room</h2>
+                <fieldset id="fieldset">
+                    <input type="text" placeholder="First name" id="emri" required minlength="1" maxlength="20">
+                    <br>
+                    <input type="text" placeholder="Last name" id="mbiemri" required minlength="1"
+                        maxlength="20">
+                    <br>
+                    <input type="email" placeholder="Email" id="email" required>
+                    <br>
+                    <input type="tel" placeholder="Phone number" id="tel"
+                        pattern="[\+]\d{3}[\]\d{2}[\]\d{3}[\]\d{3}" required minlength="9" minlength="9">
+                    <br>
+                    <input type="number" placeholder="No. of people" id="personat" max="20"
+                        min="1" required>
+                    <br>
+                    <label for="data">Date</label>
+                    <br>
+                    <input type="date" id="data" required>
+                    <label for="data">Until</label>
+                    <br>
+                    <input type="date" id="data2" required>
+                    <br>
+                    <input type="submit" value="BOOK" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
